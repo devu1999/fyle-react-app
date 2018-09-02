@@ -1,0 +1,225 @@
+@font-face {
+    font-family: devu;
+    src:url(AlexBrush-Regular.ttf);
+}
+@font-face{
+    font-family: myworld;
+    src:url(brankovic.ttf);
+}
+body {
+    font-family: "myworld",cursive;
+ background-color: black;   
+}
+
+.intro li {
+    list-style-type:none;
+    overflow:hidden;
+    display:inline-block;
+    color:white;
+    font-size: 2.3vw;
+    padding: 0.5vw 1vw;
+}
+.intro li:hover {
+    background-color: white;
+    color:black;
+}
+img {
+margin:1.5vw;
+float:right;
+border-radius:50%;
+/*outline:5px solid white;*/
+width:35vw;
+height:48vw;
+z-index:1;
+}
+ul {
+    margin:0;
+    padding: 0;
+}
+div.c1 {
+font-family: "devu" , cursive;
+text-align:center;
+background-image:url("Creative_Wallpaper_Shining_earth_in_his_hand_097370_.jpg");
+background-size: cover;
+width:100%;
+height: 47vw;
+color:red;
+border:none;
+font-size: 2.5vw;
+overflow:auto;
+}
+div.c2 {
+background-image:url("main-qimg-f41db4522ff1015bc982c6f50f7653d0-c.jpeg");
+/*border:3px solid #4CAF50;
+*/padding:0.7vw;
+color:white;
+font-size:2.5vw ;
+text-align: center;
+overflow:auto;
+}
+div.anime{
+    width:0;
+    height:100%;
+    border:none;
+    background-color: black;
+    opacity: 0.8;
+    overflow-x: hidden;
+    animation-name: animate;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-timing-function: linear;
+}
+.c2 p{
+    font-style: italic;
+    font-variant: small-caps;
+    font-size: 3vw;
+    text-shadow: 0.2vw 0.2vw 0.7vw red;
+    text-align: center;
+}
+.c1 h1,h2{
+    text-shadow: 0.2vw 0.2vw 0.3vw white, 0 0 3vw black, 0 0 0.7vw white;
+}
+
+
+/*div.c1:hover h1{
+    animation: animate 3s linear forwards;
+}
+
+div.c1:hover h2{
+    animation: animate 2s linear forwards;
+}
+@keyframes animate{
+    0%{ transform:rotate(0deg) translate(0px,0px);filter: blur(1px);
+    opacity:1; }
+    100%{transform:rotate(0deg) translate(500px,200px);filter: blur(20px);
+    opacity:0;}
+}*/
+@keyframes animate{
+    0%{ width:0%;}
+    100%{width:100%;}
+}
+.c2 h1 {
+opacity:1.0;
+transition:opacity 5s;
+color:red;
+text-shadow:0.1vw 0.2vw white;
+text-align:center;
+font-style:italic;
+}
+.c2 h1:hover {
+color: yellow;
+text-shadow:0.1px 0.2vw white;
+filter: blur(0.01vw);
+opacity:1.0;
+}
+a {
+color:white;
+display:block;
+text-decoration:none;
+}
+
+li a:hover {
+    color: black;
+text-decoration: none;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+    font-size:1.2vw;
+    text-align: center;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    width:17vw;
+    box-shadow: 0.5vw 0.5vw 2.1vw grey;
+    font-size:1vw;
+    font-size: 1vw;
+    text-align: center;
+    padding: 0.7vw 0;
+    border-radius: 0.4vw;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+#p01 {
+    font-size: 1.2vw;
+}
+#p02 {
+    font-size: 1.2vw;
+}
+c2.ul {
+    background: none;
+}
+.sidenav {
+    height: 100%; 
+    width: 0; 
+    position: fixed; 
+    z-index: 1; 
+    top: 0;
+    left: 0;
+    background-color: #111; 
+    overflow-x: hidden; 
+    padding-top: 4.3vw; 
+    transition: 0.5s; 
+}
+
+.sidenav a {
+    padding: 0.6vw 0.6vw 0.6vw 2.7vw;
+    text-decoration: none;
+    font-size: 4vw;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 2vw;
+    font-size: 3vw;
+    margin-left: 3.5vw;
+    margin-bottom: 2vw;
+}
+#main {
+    transition: margin-left .5s;
+    padding: 0;
+}
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 1.2vw;}
+    .sidenav a {font-size: 1.4vw;}
+}
+#content{
+    width:4vw;
+    height:4vw;
+    border-radius: 5%;
+    position: absolute;
+    top:0vw;
+    right:0vw;
+    opacity:1;
+    z-index: 2;
+    transition: opacity 2s ease;
+}
+#content:hover {
+    box-shadow: 0.5vw 0.5vw 2.1vw grey;
+}
+#close{
+    width:4vw;
+    height:4vw;
+    border-radius: 50%;
+    position: absolute;
+    top:0vw;
+    right:-2vw;
+    opacity:1;
+    z-index: 2;
+}
+#close:hover {
+    box-shadow: 0.5vw 0.5vw 2.1vw grey;
+}

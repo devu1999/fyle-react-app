@@ -1,0 +1,191 @@
+@font-face{
+	font-family: myworld;
+	src:url(brankovic.ttf);
+}
+body {
+	background: url("Chain_of_Rainbow_Colors.jpg") no-repeat center center fixed;
+	background-repeat: no-repeat;
+	      /*  -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+    */   
+    background-size: cover;
+	background-color: black;
+	width: 100%;
+	height: auto;
+	font-family: "myworld",cursive;
+}
+*{
+	
+	box-sizing: border-box;
+}
+.start1 p{
+	font-family:"myworld",cursive;
+	color:black;
+	text-shadow: 0 0 0.42vw #FF0000, 0 0 0.7vw #0000FF;
+	font-size: 13.4vw;
+	text-align: center;
+	line-height: 0.14vw;
+	}
+li {
+    list-style-type:none;
+    overflow:hidden;
+    display:inline-block;
+    color:white;
+    font-size: 2.3vw;
+    padding: 0.5vw 1vw;
+}
+li:hover {
+    background-color: white;
+    color:black;
+}
+li a:hover {
+    color: black;
+text-decoration: none;
+}
+#active{
+	text-shadow: 0 0 5px white, 0 0 3px black;
+
+}
+h1 {
+font-family: "myworld",cursive;
+text-shadow: 0 0 5px white, 0 0 3px black;
+text-align:left;
+margin:50px;
+font-size: 4em;
+font-weight: bold;
+}
+
+
+.col1 {
+	width:23%;
+	padding:0.7vw;
+	margin:1px;
+	float:left;
+}
+.col2 {
+	width:23%;
+	padding: 0.7vw;
+	margin: 1px;
+	float: left;
+}
+.col3 {
+	width:23%;
+	padding: 0.7vw;
+	margin: 1px;
+	float: left;
+}
+.col1 img{
+	width:100%;
+	float:left;
+	height:30vw;
+	border:2px solid black;
+	border-radius:50%;
+}
+.col4 {
+	width:23%;
+	padding: 0.7vw;
+	margin: 1px;
+	float: left;
+}
+.col4 img{
+	width:100%;
+	float:left;
+	height:30vw;
+	border:2px solid black;
+	border-radius:50%;
+}
+.col2 img{
+	width:100%;
+	float:left;
+	height:30vw;
+	border:2px solid black;
+	border-radius:50%;
+}
+.col3 img{
+	width:100%;
+	float:left;
+	height:30vw;
+	border:2px solid black;
+	border-radius:50%;
+}
+/*.col1 img:hover {
+	animation:animate 3s linear forwards;
+}
+@keyframes animate {
+	0%{
+		transform: rotate(0deg);
+		border-radius: 50%
+	}
+	100%{
+		transform: rotate(5deg);
+		border-radius: 20%;
+		box-shadow: 5px 5px 5px black,2px 2px 2px green;
+	}
+}*/
+.col1  .overlay {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30vw;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+  border-radius: 50%
+}
+ .overlay {
+  position: relative;
+  top: 0px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30vw;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: black;
+  border-radius: 50%
+}
+.col1:hover .overlay {
+  opacity: 0.8;
+}
+.col2:hover .overlay {
+  opacity: 0.8;
+}
+.col3:hover .overlay {
+  opacity: 0.8;
+}
+.col4:hover .overlay {
+  opacity: 0.8;
+}
+.text {
+  color: white;
+  font-size: 1.5vw;
+  position: relative;
+  top: 0%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.textl {
+  color: white;
+  font-size: 1.5vw;
+  position: relative;
+  top: 0%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}/*
+.col3 .text {
+  color: white;
+  font-size: 20px;
+  position: relative;
+  top: 0%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}*/

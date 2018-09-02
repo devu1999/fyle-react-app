@@ -1,0 +1,242 @@
+* {
+	margin:0;
+	padding:0;
+	border:0;
+	box-sizing: border-box;
+}
+@font-face{
+	font-family: myworld;
+	src:url(brankovic.ttf);
+}
+/*@font-face{
+	font-family: caption;
+	src:url(antipastopro-demibold-webfont.woff);
+}*/
+body{
+	font-family: "myworld",cursive;
+	background:url("296801.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: -2;
+}
+/*.container{
+	background:fixed repeat 100%;
+	background-color: black;
+	background-size: cover;
+	opacity:0.8;
+}
+.icons{
+	background:fixed repeat 100%;
+	background-color: black;
+	background-size: cover;
+	opacity:0.8;
+}*/
+li {
+	text-decoration: none;
+	font-family: "myworld",cursive;
+    list-style-type:none;
+    overflow:hidden;
+    display:inline-block;
+    color:white;
+    font-size: 2.3vw;
+    padding: 0.5vw 1vw;
+}
+li:hover {
+	background-color: white;
+    color:yellow;
+}
+}
+li:hover a {
+	color:yellow;
+text-decoration: none;
+}
+a{
+	text-decoration: none;
+}
+#active{
+	text-shadow: 0 0 0.7vw white, 0 0 0.5vw black;
+
+}
+#capt{
+	font-family: "myworld",cursive;
+	font-size:9vw;
+	padding:6vw;
+	color:white;
+	text-align:center;
+	text-shadow: 0 0 1vw white, 0 0 1vw black; 
+}
+.details h1 {
+	font-family:"myworld",cursive;
+	color:white;
+	text-shadow: 0 0 0.5vw #FF0000, 0 0 0.8vw #0000FF;
+	font-size: 4vw;
+	text-align: center;
+	padding:2vw;
+	overflow: auto;
+	margin-top: 6vw;
+	list-style-type: disc;
+	list-style-position: inside;
+	}
+	.details p{
+		text-indent: 1.4vw;
+		font-family: "myworld",cursive;
+		text-shadow: 0 0 3.5vw black, 0 0 0.7vw white;
+		font-size: 2.5vw;
+		color:red;
+		word-spacing: 0.01vw;
+		line-height: 4vw;
+		text-align: center;
+	}
+	.col1 img{
+		width:50%;
+		height:15vw;
+		border-radius: 25%;
+		position: relative;
+		top:0vw;
+		left:4vw;
+
+
+	}
+	.col3 img{
+		width:50%;
+		height:15vw;
+		border-radius: 25%;
+		position: relative;
+		left: 6vw;
+		top:0vw;
+	}
+	.col1 {
+/*		background:fixed repeat 100%;
+	background-color: black;
+	background-size: cover;
+	opacity:0.8;
+*/
+	width:23%;
+	padding:1vw;
+	margin:1vw;
+	float:left;
+}
+.col2 {
+/*	background:fixed repeat 100%;
+	background-color: black;
+	background-size: cover;
+	opacity:0.8;
+*/
+	width:45%;
+	padding: 1vw;
+	margin: 1vw;
+	float: left;
+}
+.col3 {
+/*	background:fixed repeat 100%;
+	background-color: black;
+	background-size: cover;
+	opacity:0.8;
+*/
+	width:23%;
+	padding: 1vw;
+	margin: 1vw;
+	float: left;
+}
+.col1  .overlay {
+  position: relative;
+  top: -15.2vw;
+  bottom: 0;
+  left: 4vw;
+  right: 0;
+  height: 15vw;
+  width: 50%;
+  opacity: 0.8;
+  transition: .5s ease;
+  background-color: black;
+  border-radius: 25%;
+   box-shadow: 0.5vw 0.5vw 2.1vw grey; 
+}
+ .col3 .overlay {
+  position: relative;
+  top: -15.2vw;
+  bottom: 0;
+   box-shadow: 0.5vw 0.5vw 2.1vw grey;
+  left: 6vw;
+  right: 0;
+  height: 15vw;
+  width: 50%;
+  opacity: 0.8;
+  transition: opacity .5s ease;
+  background-color: black;
+  border-radius: 25%;
+}
+
+/*.col1:hover .overlay {
+  opacity: 0.9;
+}
+.col3:hover .overlay {
+  opacity: 0.9;
+}*/
+
+
+.text {
+  color: white;
+  font-size: 1.4vw;
+  position: relative;
+  top: 7vw;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.textl {
+  color: white;
+  font-size: 1.4vw;
+  position: relative;
+  top: 7vw;
+  left: 51%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+.col2 h1{
+	font-family:"myworld",cursive;
+	color:black;
+	text-shadow: 0 0 0.5vw #FF0000, 0 0 0.8vw #0000FF;
+	font-size: 4vw;
+	text-align: center;
+	padding:2vw;
+	overflow: auto;
+	margin-top: -1vw;
+}
+.col2 p{
+	font-family:"myworld",cursive;
+	color:green;
+	text-shadow: 0 0 0.5vw #FF0000, 0 0 0.8vw #0000FF;
+	font-size: 3vw;
+	text-align: center;
+	padding:2vw;
+	overflow: auto;
+}
+.pingme h1{
+	position:relative;
+	top:-5vw;
+	left:42vw;
+	font-family: "myworld",cursive;
+	color:white;
+	text-shadow: 0 0 0.5vw #FF0000, 0 0 0.8vw #0000FF;
+	font-size: 3vw;
+}
+.social img{
+	height:3vw;
+	width:3vw;
+	border-radius: 25%;
+	margin-top:3vw;
+}
+#img1{
+	position:relative;
+	top:-5vw;
+	left:44vw;
+}
+#img2{
+	position:relative;
+	top:-5vw;
+	left:45vw;
+}
+.social img:hover{
+	box-shadow: 0.5vw 0.5vw 2.1vw grey;
+}

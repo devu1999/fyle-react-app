@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Table from 'react-bootstrap/Table';
 // import {withRouter} from 'react-router-dom';
+import {reactLocalStorage} from 'reactjs-localstorage';
 
 var FontAwesome = require('react-fontawesome')
 
@@ -84,14 +85,14 @@ var FontAwesome = require('react-fontawesome')
         };
       }
       addFavorite = (item) => {
-        var records = JSON.parse(window.localStorage.getItem('favorite'));
+        var records = JSON.parse(reactLocalStorage.get('favorite'));
         if(records == 0)
         {
           records = []
         }
         records.push(item);
-        window.localStorage.setItem('favorite', JSON.stringify(records));
-          console.log(window.localStorage.getItem('favorite'));
+        reactLocalStorage.set('favorite', JSON.stringify(records));
+          console.log(reactLocalStorage.get('favorite'));
       };
       renderItems = () => {
         const newItems = this.state.todoList
@@ -126,7 +127,7 @@ var FontAwesome = require('react-fontawesome')
       };
 
       renderFavs = () => {
-        const newItems = JSON.parse(window.localStorage.getItem('favorite'))
+        const newItems = JSON.parse(reactLocalStorage.get('favorite'))
         if(newItems == 0)
           {
             this.setState({_seefav: false});

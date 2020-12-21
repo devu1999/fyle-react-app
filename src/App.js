@@ -87,7 +87,6 @@ var FontAwesome = require('react-fontawesome')
         };
       }
       addFavorite = (item) => {
-        console.log(reactLocalStorage.get('favorite'));
         var records
         if(reactLocalStorage.get('favorite') == undefined)
           records = []
@@ -95,7 +94,6 @@ var FontAwesome = require('react-fontawesome')
           records = JSON.parse(reactLocalStorage.get('favorite'))
         records.push(item);
         reactLocalStorage.set('favorite', JSON.stringify(records));
-        console.log(reactLocalStorage.get('favorite'));
       };
       renderItems = () => {
         const newItems = this.state.todoList
@@ -218,7 +216,6 @@ var FontAwesome = require('react-fontawesome')
       } 
       handleChange = (e) => {
         const apiUrl = `https://fyle-test-dev.herokuapp.com/api/branches?q=${e.target.value}&offset=0&limit=${this.state._pageSize}`
-        console.log(apiUrl);
         fetch(apiUrl)
       .then((response) => response.json())
       .then((data) => this.setState({todoList: data}));

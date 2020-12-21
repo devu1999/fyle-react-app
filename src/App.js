@@ -87,27 +87,13 @@ var FontAwesome = require('react-fontawesome')
         };
       }
       addFavorite = (item) => {
-        // console.log(reactLocalStorage.get('favorite'));
-        // console.log(xtype(reactLocalStorage.get('favorite')));
-        // console.log(xtype(JSON.parse(reactLocalStorage.get('favorite'))));
-        // console.log(xtype(item))
-        // var records = reactLocalStorage.get('favorite');
-        // if(records == 0)
-        // {
-        //   records = []
-        // }
-        //var records = JSON.parse(reactLocalStorage.get('favorite'))
         console.log(reactLocalStorage.get('favorite'));
         if(reactLocalStorage.get('favorite') == undefined)
           records = JSON.parse({})
         else
           records = JSON.parse(reactLocalStorage.get('favorite'))
-        // console.log(xtype(reactLocalStorage.get('favorite')));
-        // console.log(JSON.parse(reactLocalStorage.get('favorite')));
-        // console.log(xtype(item))
         records.push(item);
-        // reactLocalStorage.set('favorite', JSON.stringify(records));
-        //   console.log(reactLocalStorage.get('favorite'));
+        reactLocalStorage.set('favorite', JSON.stringify(records));
       };
       renderItems = () => {
         const newItems = this.state.todoList

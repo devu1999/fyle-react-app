@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Table from 'react-bootstrap/Table';
-import {withRouter} from 'react-router';
+import {withRouter} from 'react-router-dom';
 
 var FontAwesome = require('react-fontawesome')
 

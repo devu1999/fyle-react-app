@@ -89,11 +89,12 @@ var FontAwesome = require('react-fontawesome')
       addFavorite = (item) => {
         console.log(reactLocalStorage.get('favorite'));
         if(reactLocalStorage.get('favorite') == undefined)
-          records = JSON.parse({})
+          records = JSON.parse([])
         else
           records = JSON.parse(reactLocalStorage.get('favorite'))
         records.push(item);
         reactLocalStorage.set('favorite', JSON.stringify(records));
+        console.log(reactLocalStorage.get('favorite'));
       };
       renderItems = () => {
         const newItems = this.state.todoList
@@ -128,12 +129,13 @@ var FontAwesome = require('react-fontawesome')
       };
 
       renderFavs = () => {
-        const newItems = JSON.parse(reactLocalStorage.get('favorite'));
-        if(newItems == 0)
+        if(reactLocalStorage.get('favorite') == undefined)
           {
             this.setState({_seefav: false});
             return;
           }
+          const newItems = JSON.parse(reactLocalStorage.get('favorite'));
+
         return (
           <Table responsive striped bordered hover variant="dark">
             <thead>

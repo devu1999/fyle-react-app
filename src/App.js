@@ -180,7 +180,7 @@ var FontAwesome = require('react-fontawesome')
       componentDidMount () {
         this.documentData = JSON.parse(localStorage.getItem('document'));
         //const apiUrl = 'https://fyle-test-dev.herokuapp.com/api/branches/autocomplete?q=RTGS&offset=0&limit=10'
-        const apiUrl = `http://127.0.0.1:8080/api/branches/autocomplete?q=&offset=0&limit=${this.state._pageSize}`
+        const apiUrl = `https://fyle-test-dev.herokuapp.com/api/branches/autocomplete?q=&offset=0&limit=${this.state._pageSize}`
           fetch(apiUrl)
         .then((response) => response.json())
         .then((data) => this.setState({todoList: data,
@@ -189,7 +189,7 @@ var FontAwesome = require('react-fontawesome')
 
       toggleItem = (id, key) => {
         this.setState({selectedLocation: key}, () => {
-          const apiUrl = `http://127.0.0.1:8080/api/branches/autocomplete?q=${this.state.selectedLocation}&offset=0&limit=${this.state._pageSize}`
+          const apiUrl = `https://fyle-test-dev.herokuapp.com/api/branches/autocomplete?q=${this.state.selectedLocation}&offset=0&limit=${this.state._pageSize}`
         fetch(apiUrl)
          .then((response) => response.json())
           .then((data) => this.setState({todoList: data}));
@@ -198,7 +198,7 @@ var FontAwesome = require('react-fontawesome')
 
       togglePageSize = (value) => {
         this.setState({_pageSize: value}, () => {
-          const apiUrl = `http://127.0.0.1:8080/api/branches/autocomplete?q=${this.state.selectedLocation}&offset=0&limit=${this.state._pageSize}`
+          const apiUrl = `https://fyle-test-dev.herokuapp.com/api/branches/autocomplete?q=${this.state.selectedLocation}&offset=0&limit=${this.state._pageSize}`
         fetch(apiUrl)
          .then((response) => response.json())
           .then((data) => this.setState({todoList: data}));
@@ -210,7 +210,7 @@ var FontAwesome = require('react-fontawesome')
       } 
       handleChange = (e) => {
         console.log(e.target.value);
-        const apiUrl = `http://127.0.0.1:8080/api/branches?q=${e.target.value}&offset=0&limit=${this.state._pageSize}`
+        const apiUrl = `https://fyle-test-dev.herokuapp.com/api/branches?q=${e.target.value}&offset=0&limit=${this.state._pageSize}`
         console.log(apiUrl);
         fetch(apiUrl)
       .then((response) => response.json())
@@ -300,7 +300,7 @@ var FontAwesome = require('react-fontawesome')
                   {this.renderDropdown()}
                   {this.renderPageSize()}
                   {this.renderFavorites()}
-                  {!this.state._seefav && <input placeholder="Search" onChange={(e) => {this.handleChange(e)}} />}
+                  {!this.state._seefav && x``<input placeholder="Search" onChange={(e) => {this.handleChange(e)}} />}
                   <ul className="list-group list-group-flush">
                     {!this.state._seefav && this.renderItems()}
                     {this.state._seefav && this.renderFavs()}

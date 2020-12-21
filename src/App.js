@@ -91,7 +91,7 @@ var FontAwesome = require('react-fontawesome')
         // {
         //   records = []
         // }
-        var records = rectLocalStorage.get('favorite') | []
+        var records = reactLocalStorage.get('favorite') | []
         records.push(item);
         reactLocalStorage.set('favorite', JSON.stringify(records));
           console.log(reactLocalStorage.get('favorite'));

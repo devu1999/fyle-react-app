@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Table from 'react-bootstrap/Table';
+import {withRouter} from 'react-router';
 
 var FontAwesome = require('react-fontawesome')
 
@@ -125,7 +126,6 @@ var FontAwesome = require('react-fontawesome')
       };
 
       renderFavs = () => {
-        const { viewCompleted } = this.state;
         const newItems = JSON.parse(localStorage.getItem('favorite'))
         if(newItems == 0)
           {
@@ -315,4 +315,4 @@ var FontAwesome = require('react-fontawesome')
         );
       }
     }
-    export default App;
+    export default withRouter(App);

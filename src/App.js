@@ -128,6 +128,11 @@ var FontAwesome = require('react-fontawesome')
       renderFavs = () => {
         const { viewCompleted } = this.state;
         const newItems = JSON.parse(ls.get('favorite'))
+        if(newItems == 0)
+          {
+            this.setState({_seefav: false});
+            return;
+          }
         return (
           <Table responsive striped bordered hover variant="dark">
             <thead>
@@ -209,7 +214,6 @@ var FontAwesome = require('react-fontawesome')
             this.setState({_seefav: value});
       } 
       handleChange = (e) => {
-        console.log(e.target.value);
         const apiUrl = `https://fyle-test-dev.herokuapp.com/api/branches?q=${e.target.value}&offset=0&limit=${this.state._pageSize}`
         console.log(apiUrl);
         fetch(apiUrl)

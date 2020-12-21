@@ -98,12 +98,12 @@ var FontAwesome = require('react-fontawesome')
         // }
         //var records = JSON.parse(reactLocalStorage.get('favorite'))
         console.log(reactLocalStorage.get('favorite'));
-        console.log(xtype(reactLocalStorage.get('favorite')));
-        console.log(JSON.parse(reactLocalStorage.get('favorite')));
-        console.log(xtype(item))
-        records.push(item);
-        reactLocalStorage.set('favorite', JSON.stringify(records));
-          console.log(reactLocalStorage.get('favorite'));
+        // console.log(xtype(reactLocalStorage.get('favorite')));
+        // console.log(JSON.parse(reactLocalStorage.get('favorite')));
+        // console.log(xtype(item))
+        // records.push(item);
+        // reactLocalStorage.set('favorite', JSON.stringify(records));
+        //   console.log(reactLocalStorage.get('favorite'));
       };
       renderItems = () => {
         const newItems = this.state.todoList

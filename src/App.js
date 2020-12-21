@@ -300,7 +300,7 @@ var FontAwesome = require('react-fontawesome')
                   {this.renderDropdown()}
                   {this.renderPageSize()}
                   {this.renderFavorites()}
-                  {!this.state._seefav && x``<input placeholder="Search" onChange={(e) => {this.handleChange(e)}} />}
+                  {!this.state._seefav && <input placeholder="Search" onChange={(e) => {this.handleChange(e)}} />}
                   <ul className="list-group list-group-flush">
                     {!this.state._seefav && this.renderItems()}
                     {this.state._seefav && this.renderFavs()}

@@ -17,7 +17,8 @@
     "react-scripts": "4.0.1",
     "reactjs-localstorage": "^1.0.1",
     "reactstrap": "^8.7.1",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "xtypejs": "^0.7.1"
   },
   "scripts": {
     "start": "react-scripts start",

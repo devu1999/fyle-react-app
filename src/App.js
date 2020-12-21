@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import Table from 'react-bootstrap/Table';
 // import {withRouter} from 'react-router-dom';
 import {reactLocalStorage} from 'reactjs-localstorage';
+import xtype from 'xtypejs';
+
 
 var FontAwesome = require('react-fontawesome')
 
@@ -86,6 +88,7 @@ var FontAwesome = require('react-fontawesome')
       }
       addFavorite = (item) => {
         console.log(reactLocalStorage.get('favorite'));
+        console.log(xtype(reactLocalStorage.get('favorite')));
         // var records = reactLocalStorage.get('favorite');
         // if(records == 0)
         // {

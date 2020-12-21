@@ -84,14 +84,14 @@ var FontAwesome = require('react-fontawesome')
         };
       }
       addFavorite = (item) => {
-        var records = JSON.parse(localStorage.getItem('favorite'));
+        var records = JSON.parse(window.localStorage.getItem('favorite'));
         if(records == 0)
         {
           records = []
         }
         records.push(item);
-        localStorage.setItem('favorite', JSON.stringify(records));
-          console.log(localStorage.getItem('favorite'));
+        window.localStorage.setItem('favorite', JSON.stringify(records));
+          console.log(window.localStorage.getItem('favorite'));
       };
       renderItems = () => {
         const newItems = this.state.todoList
@@ -126,7 +126,7 @@ var FontAwesome = require('react-fontawesome')
       };
 
       renderFavs = () => {
-        const newItems = JSON.parse(localStorage.getItem('favorite'))
+        const newItems = JSON.parse(window.localStorage.getItem('favorite'))
         if(newItems == 0)
           {
             this.setState({_seefav: false});
@@ -182,7 +182,6 @@ var FontAwesome = require('react-fontawesome')
       
 
       componentDidMount () {
-        this.documentData = JSON.parse(localStorage.getItem('document'));
         //const apiUrl = 'https://fyle-test-dev.herokuapp.com/api/branches/autocomplete?q=RTGS&offset=0&limit=10'
         const apiUrl = `https://fyle-test-dev.herokuapp.com/api/branches/autocomplete?q=&offset=0&limit=${this.state._pageSize}`
           fetch(apiUrl)

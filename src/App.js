@@ -85,7 +85,8 @@ var FontAwesome = require('react-fontawesome')
         };
       }
       addFavorite = (item) => {
-        var records = JSON.parse(reactLocalStorage.get('favorite'));
+        console.log(reactLocalStorage.get('favorite'));
+        var records = reactLocalStorage.get('favorite');
         if(records == 0)
         {
           records = []
@@ -127,7 +128,7 @@ var FontAwesome = require('react-fontawesome')
       };
 
       renderFavs = () => {
-        const newItems = JSON.parse(reactLocalStorage.get('favorite'))
+        const newItems = reactLocalStorage.get('favorite');
         if(newItems == 0)
           {
             this.setState({_seefav: false});

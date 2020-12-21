@@ -87,16 +87,12 @@ var FontAwesome = require('react-fontawesome')
         };
       }
       addFavorite = (item) => {
-        console.log(reactLocalStorage.get('favorite'));
-        console.log(xtype(reactLocalStorage.get('favorite')));
-        console.log(xtype(JSON.parse(reactLocalStorage.get('favorite'))));
-        console.log(xtype(item))
+        // console.log(reactLocalStorage.get('favorite'));
+        // console.log(xtype(reactLocalStorage.get('favorite')));
+        // console.log(xtype(JSON.parse(reactLocalStorage.get('favorite'))));
+        // console.log(xtype(item))
         // var records = reactLocalStorage.get('favorite');
-        // if(records == 0)
-        // {
-        //   records = []
-        // }
-        var records = JSON.parse(reactLocalStorage.get('favorite'))
+        var records = JSON.parse(reactLocalStorage.get('favorite')) | new Array()
         records.push(item);
         reactLocalStorage.set('favorite', JSON.stringify(records));
           console.log(reactLocalStorage.get('favorite'));
@@ -134,7 +130,7 @@ var FontAwesome = require('react-fontawesome')
       };
 
       renderFavs = () => {
-        const newItems = reactLocalStorage.get('favorite');
+        const newItems = JSON.parse(reactLocalStorage.get('favorite'));
         if(newItems == 0)
           {
             this.setState({_seefav: false});
